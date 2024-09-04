@@ -11,6 +11,7 @@ class Ball (Turtle):
         self.penup()
         self.x_move = 15
         self.y_move = 10
+        self.ballspeed = 0.1
 
     def moveball (self):
         new_x = self.xcor() + self.x_move
@@ -19,9 +20,11 @@ class Ball (Turtle):
 
     def bounce_y (self):
         self.y_move *= -1 # changing ball's direction to exactly opposite
-    
+        
     def bounce_x (self):
         self.x_move *= -1
+        self.ballspeed *= 0.9 # changing the speed of the ball when successfully touched a paddle
 
     def reset_position (self):
         self.goto(0, 0)
+        self.ballspeed = 0.5
