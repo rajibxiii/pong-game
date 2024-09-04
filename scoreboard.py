@@ -8,6 +8,7 @@ class Scoreboard (Turtle):
         self.hideturtle()
         self.leftScore = 0
         self.rightScore = 0
+        self.update_scores()
         
     def update_scores (self):
         self.clear()

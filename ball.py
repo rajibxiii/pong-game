@@ -1,4 +1,5 @@
 from turtle import Turtle
+from random import randint
 
 class Ball (Turtle):
     def __init__ (self):
@@ -27,4 +28,7 @@ class Ball (Turtle):
 
     def reset_position (self):
         self.goto(0, 0)
-        self.ballspeed = 0.5
+        self.ballspeed = 0.1
+        self.y_move = randint (-10, 10) # after every reset, ball moves to different position
+        while self.y_move == 0: # y=0 would take the ball back and forth in x-axis (because, straight)
+            self.y_move = randint (-10, 10)
