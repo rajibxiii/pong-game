@@ -39,8 +39,12 @@ while game_on:
     if ball.distance(right_paddle) < 50 and ball.xcor() > 320 or ball.distance(left_paddle) < 50 and ball.xcor() < -320: # measures the distance from the middle points of the objects
         ball.bounce_x()
     # detect ball miss
-    elif ball.xcor() > 380 or ball.xcor() < -380:
-        ball.reset_position( )
+    elif ball.xcor() > 380:
+        ball.reset_position()
+        scores.left_point()
+    elif ball.xcor() < -380:
+        ball.reset_position()
+        scores.right_point()
 
 
 

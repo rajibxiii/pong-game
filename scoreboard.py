@@ -21,5 +21,5 @@ class Scoreboard (Turtle):
         self.update_scores()
 
     def right_point (self):
-        self.right_point += 1
+        self.rightScore += 1
         self.update_scores()
